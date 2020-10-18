@@ -42,34 +42,34 @@ window.onload = function (e) {
       { name: "version", type: "string" },
       { name: "chainId", type: "uint256" },
       { name: "verifyingContract", type: "address" },
-      { name: "salt", type: "bytes32" },
+      // { name: "salt", type: "bytes32" },
     ];
 
     const bid = [
       { name: "amount", type: "uint256" },
-      { name: "bidder", type: "Identity" },
+      { name: "bidder", type: "address" },
     ];
 
     const identity = [
-      { name: "userId", type: "uint256" },
       { name: "wallet", type: "address" },
+      { name: "token", type: "address" },
     ];
 
-    const chainId = parseInt(web3.version.network, 10);
+    const chainId = parseInt(web3.version.network, 61);
   
     const domainData = {
-      name: "My amazing dApp",
-      version: "2",
+      name: "Uniswap V2",
+      version: "1",
       chainId: chainId,
-      verifyingContract: "0x1C56346CD2A2Bf3202F771f50d3D14a367B48070",
-      salt: "0xf2d857f4a3edcb9b78b4d503bfe733db1e3f6cdc2b7971ee739626c97e86a558"
+      verifyingContract: "0xd8ebe4e6ac8d3c85e2f243e11e8b96c9b12c85af"
+      // salt: "0xf2d857f4a3edcb9b78b4d503bfe733db1e3f6cdc2b7971ee739626c97e86a558"
     };
 
     var message = {
-      amount: 100,
+      amount: 1,
       bidder: {
-        userId: 323,
-        wallet: "0x3333333333333333333333333333333333333333"
+        wallet: "0x5EF83Ab1155786f146c5A00722bEF7aB683Dc0DE",
+        token: "0xd8ebe4e6ac8d3c85e2f243e11e8b96c9b12c85af"
       }
     };
     
